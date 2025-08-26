@@ -1,0 +1,70 @@
+/* === Estilo da Seção de Vagas === */
+.vagas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+  }
+  
+  .vaga-card {
+    background-color: #ffffff;
+    border: 1px solid #dfe6ec;
+    border-left: 6px solid #2c3e50;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease;
+  }
+  
+  .vaga-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  }
+  
+  .vaga-card h3 {
+    margin-top: 0;
+    color: #b80000;
+    font-size: 18px;
+  }
+  
+  .vaga-card p {
+    margin: 4px 0;
+    color: #444;
+    font-size: 14px;
+  }
+  
+  .vaga-card p strong {
+    color: #2c3e50;
+  }
+  
+  .vaga-card button {
+    margin-top: 12px;
+    padding: 10px 18px;
+    background-color: #b80000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .vaga-card button:hover {
+    background-color: #1a242f;
+  }
+  
+  /* Filtro */
+  label[for="filtroCurso"] {
+    font-weight: bold;
+    font-size: 15px;
+    color: #2c3e50;
+  }
+  
+  #filtroCurso {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }

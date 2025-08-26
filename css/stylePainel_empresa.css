@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+  background-color: red;
+}
+
+.profile-section {
+  position: relative;
+}
+
+.email-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  border-top: 1px solid #333;
+}
+
+.email-icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.email-text {
+  font-weight: bold;
+}
+
+.menu-popup {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  background-color: #bbb;
+  color: black;
+  border-radius: 8px;
+  padding: 10px;
+  width: 160px;
+  z-index: 10;
+}
+
+.menu-popup .menu-item {
+  padding: 8px;
+  border-bottom: 1px solid #999;
+  cursor: pointer;
+}
+
+.menu-popup .menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-popup .menu-item:hover {
+  background-color: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}

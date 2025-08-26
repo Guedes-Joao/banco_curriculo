@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel da Empresa</title>
+  <script src="https://kit.fontawesome.com/e66b0e408d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/stylePainel_aluno.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Área da Empresa</h2>
+      <ul>
+        <li><a href="#">Currículo</a></li>
+        <li><a href="#">Vagas</a></li>
+        <li><a href="#">Minhas Candidaturas</a></li>
+        <li><a href="#">Atualizar Perfil</a></li>
+      </ul>
+
+      <div class="profile-section">
+        <div id="email-toggle" class="email-toggle">
+          <span class="email-icon"><i class="fa-solid fa-circle-user"></i></span>
+          <span class="email-text">Seu email</span>
+        </div>
+        <div id="menu-popup" class="menu-popup hidden">
+          <div class="menu-item"><i class="fa-solid fa-gear"></i> Configurações</div>
+          <div class="menu-item"><i class="fa-solid fa-circle-info"></i> Ajuda</div>
+          <div class="menu-item"><i class="fa-solid fa-right-from-bracket"></i> Sair</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Configurações -->
+    <div id="configuracoesModal" class="modal">
+      <div class="modal-content grande">
+        <span class="close" onclick="fecharModal('configuracoesModal')">&times;</span>
+        <h2><i class="fa-solid fa-gear"></i> Configurações</h2>
+        <hr>
+        <div class="modal-section">
+          <h3>Em desenvolvimento...</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Ajuda -->
+    <div id="ajudaModal" class="modal">
+      <div class="modal-content grande">
+        <span class="close" onclick="fecharModal('ajudaModal')">&times;</span>
+        <h2><i class="fa-solid fa-circle-info"></i> Ajuda</h2>
+        <hr>
+        <div class="modal-section">
+          <h3>Em desenvolvimento...</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Bem-vindo à sua área de empresa!</h1>
+      <p>Aqui você pode consultal currículo, acompanhar seus candidatos de estágio e atualizar suas informações.</p>
+    </div>
+  </div>
+
+  <script>
+    const emailToggle = document.getElementById("email-toggle");
+    const menuPopup = document.getElementById("menu-popup");
+
+    emailToggle.addEventListener("click", () => {
+      menuPopup.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!emailToggle.contains(e.target) && !menuPopup.contains(e.target)) {
+        menuPopup.classList.add("hidden");
+      }
+    });
+
+    document.querySelector('.menu-item:nth-child(1)').addEventListener('click', () => {
+      abrirModal('configuracoesModal');
+    });
+
+    document.querySelector('.menu-item:nth-child(2)').addEventListener('click', () => {
+      abrirModal('ajudaModal');
+    });
+
+    document.querySelector('.menu-item:nth-child(3)').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+
+    function abrirModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function fecharModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+      let modais = document.getElementsByClassName('modal');
+      for (let modal of modais) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

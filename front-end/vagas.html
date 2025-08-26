@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vagas Disponíveis</title>
+  <link rel="stylesheet" href="../css/vagas.css">
+</head>
+<body>
+  <div class="main" style="padding: 30px;">
+    <h2>Vagas Disponíveis</h2>
+
+    <label for="filtroCurso"><strong>Filtrar por Curso:</strong></label>
+    <select id="filtroCurso" onchange="filtrarVagas()">
+      <option value="todas">Todas</option>
+      <option value="Administração">Administração</option>
+      <option value="Informática">Informática</option>
+      <option value="Desenvolvimento de Sistemas">Desenvolvimento de Sistemas</option>
+      <option value="Agropecuária">Agropecuária</option>
+    </select>
+
+    <div id="listaVagas" class="vagas-container"></div>
+  </div>
+
+  <script src="../js/vagas.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+@media (max-width: 480px) {
+
+  * {
+    visibility: hidden;
+  }  
+
+  .header {
+    width: 100vw;
+    visibility: visible;
+    position: relative;
+  }
+
+  .header img.logo-etec {
+    height: 85px;
+    visibility: visible;
+  }
+
+  .header img.logo-app {
+    position: absolute;
+    left: auto;
+    right: 200px;
+    height: 190px;
+    visibility: visible;
+  }
+
+  .content {
+    visibility: visible;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 140px;
+    }
+
+   .divulgacao {
+    visibility: visible;
+    position: absolute;
+    top: 250px;
+   }
+   
+   .divulgacao img, .divulgacao p {
+    visibility: visible;
+   }
+
+   .info {
+    visibility: visible;
+    position: absolute;
+    top: 500px;
+   }
+
+   .info img, .info p {
+    visibility: visible;
+   }
+
+   .estagiando {
+    visibility: visible;
+    position: absolute;
+    top: 750px;
+   }
+
+   .estagiando img, .estagiando p {
+    visibility: visible;
+   }
+
+   .divulgacao.active,
+   .info.active,
+   .estagiando.active {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+}

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+a {
+    text-decoration: none;
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    background-color: #b00000;
+    height: 18vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* já tem, mantém */
+    position: relative; /* para os absolutos funcionarem relativos a ela */
+}
+
+.header .logo-etec {
+    height: 130px;
+    position: absolute;
+    right: 80px;
+}
+
+.header .logo-app {
+    height: 250px;
+    position: absolute;
+    left: 40%;
+}
+
+.header .estudante {
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    height: 150%;
+    width: auto;
+    max-height: none;
+    max-width: none;
+    object-fit: cover;
+    display: block;
+}
+
+.content {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    gap: 140px; /* espaço entre as divs */
+    align-items: center;
+}
+
+.content .divulgacao a,
+.content .info a,
+.content .estagiando a {
+    background-color: #b00000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.divulgacao p,
+.info p,
+.estagiando p {
+    color: white;
+    font-weight: bold;
+}
+
+.divulgacao img,
+.estagiando img {
+    height: 130px;
+}
+
+.estagiando img {
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+.info img {
+    height: 155px;
+    margin-bottom: -15px;
+}
+
+@media (hover: hover) {
+.content .divulgacao a:hover,
+.content .info a:hover,
+.content .estagiando a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 220px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer button {
+    border-radius: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: #b00000;
+    height: 50px;
+    width: 150px;
+    border: none;
+}
+
+.footer .btn-2 {
+    background-color: gray;
+    border-color: gray;
+}
+
+@media (max-width: 480px) {
+
+    .header img.logo-etec {
+        height: 85px;
+        position: absolute;
+        right: 50px;
+    }
+
+    .header img.estudante {
+        visibility: hidden;
+    }
+
+    .header img.logo-app {
+        position: absolute;
+        left: auto;
+        right: 200px;
+        height: 190px;
+    }
+
+    .content {
+        margin-top: 250px;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .footer {
+        position: absolute;
+        top: 1150px;
+    }
+
+    .content .divulgacao a:active,
+    .content .info a:active,
+    .content .estagiando a:active {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .header img.logo-etec {
+        height: 140px;
+        position: absolute;
+        right: 120px;
+    }
+
+    .header img.estudante {
+        visibility: hidden;
+    }
+
+    .header img.logo-app {
+        position: absolute;
+        left: auto;
+        right: 310px;
+        height: 300px;
+    }
+
+    .content {
+        margin-top: 150px;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .footer {
+        position: absolute;
+        top: 1200px;
+    }
+
+    .content .divulgacao a:active,
+    .content .info a:active,
+    .content .estagiando a:active {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}

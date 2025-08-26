@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel do Aluno</title>
+  <link id="favicon" rel="icon" type="image/png" href="../img/favicon-light.png">
+  <script src="https://kit.fontawesome.com/e66b0e408d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/stylePainel_aluno.css" />
+  <link rel="stylesheet" href="../css/curriculo.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-top">
+        <h2 onclick="carregarPagina('inicio.html')" style="cursor:pointer;">
+          <i class="fa-solid fa-circle-left"></i> Área do Aluno
+        </h2>
+        <ul>
+          <li><a href="#" onclick="carregarPagina('curriculo.html')">Currículo</a></li>
+          <li><a href="#" onclick="carregarPagina('vagas.html')">Vagas</a></li>
+          <li><a href="#" onclick="carregarPagina('Candidaturas.html')">Minhas Candidaturas</a></li>
+          <li><a href="#" onclick="carregarPagina('atualizar_perfil.html')">Atualizar Perfil</a></li>
+        </ul>
+      </div>
+
+      <div class="profile-section">
+        <div id="email-toggle" class="email-toggle">
+          <span class="email-icon"><i class="fa-solid fa-circle-user"></i></span>
+          <span class="email-text">Seu nome</span>
+        </div>
+        <div id="menu-popup" class="menu-popup hidden">
+          <div class="menu-item" onclick="abrirModal('configModal')"><i class="fa-solid fa-gear"></i> Configurações</div>
+          <div class="menu-item" onclick="abrirModal('ajudaModal')"><i class="fa-solid fa-circle-info"></i> Ajuda</div>
+          <div class="menu-item"><i class="fa-solid fa-right-from-bracket"></i> Sair</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área Principal -->
+    <div class="app">
+      <div class="content" id="conteudo">
+        <h1>Bem-vindo à sua área de aluno!</h1>
+        <p>Aqui você pode cadastrar seu currículo, acompanhar oportunidades de estágio e atualizar suas informações.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Configurações -->
+  <div id="configModal" class="modal">
+    <div class="modal-content grande">
+      <span class="close" onclick="fecharModal('configModal')">&times;</span>
+      <h2><i class="fa-solid fa-gear"></i> Configurações</h2>
+      <hr>
+      <div class="modal-section">
+        <div class="accordion">
+          <!-- Segurança -->
+          <button class="accordion-btn"><i class="fa-solid fa-lock"></i> Segurança</button>
+          <div class="accordion-content">
+            <label for="novaSenha">Alterar Senha:</label>
+            <input type="password" id="novaSenha" placeholder="Digite nova senha">
+            <button class="btn">Salvar Senha</button>
+          </div>
+
+          <!-- Notificações -->
+          <button class="accordion-btn"><i class="fa-solid fa-bell"></i> Notificações</button>
+          <div class="accordion-content">
+            <label><input type="checkbox"> Receber emails de novas vagas</label><br>
+            <label><input type="checkbox"> Receber notificações por WhatsApp</label>
+          </div>
+
+          <!-- Personalização -->
+          <button class="accordion-btn"><i class="fa-solid fa-palette"></i> Personalização</button>
+          <div class="accordion-content">
+            <label for="tema">Tema:</label>
+            <select id="tema">
+              <option value="dark">Escuro</option>
+              <option value="light">Claro</option>
+            </select>
+          </div>
+
+          <!-- Conta -->
+          <button class="accordion-btn"><i class="fa-solid fa-user"></i> Conta</button>
+          <div class="accordion-content">
+            <p><strong>Email atual:</strong> usuario@teste.com</p>
+            <label for="novoEmail">Alterar Email:</label>
+            <input type="email" id="novoEmail" placeholder="Digite novo email">
+            <button class="btn">Salvar Alterações</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ajuda -->
+  <div id="ajudaModal" class="modal">
+    <div class="modal-content grande">
+      <span class="close" onclick="fecharModal('ajudaModal')">&times;</span>
+      <h2><i class="fa-solid fa-circle-info"></i> Ajuda</h2>
+      <hr>
+      <div class="modal-section">
+        <h3>Perguntas Frequentes</h3>
+        <div class="accordion">
+          <button class="accordion-btn">Como cadastrar currículo?</button>
+          <div class="accordion-content">
+            <p>Vá até a aba <strong>Currículo</strong> no menu lateral.</p>
+          </div>
+
+          <button class="accordion-btn">Como me candidatar a uma vaga?</button>
+          <div class="accordion-content">
+            <p>Acesse <strong>Vagas</strong> e clique em <strong>Candidatar-se</strong>.</p>
+          </div>
+
+          <button class="accordion-btn">Como atualizar minhas informações?</button>
+          <div class="accordion-content">
+            <p>Use a opção <strong>Atualizar Perfil</strong>.</p>
+          </div>
+        </div>
+
+        <h3>Contato com Suporte</h3>
+        <p><i class="fa-solid fa-envelope"></i> Email: suporte@seudominio.com</p>
+        <p><i class="fa-solid fa-phone"></i> Telefone: (11) 99999-9999</p>
+        <p><i class="fa-solid fa-comment"></i> WhatsApp:
+          <a href="https://wa.me/5511999999999" target="_blank">Clique aqui</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/painel_aluno.js"></script>
+</body>
+</html>
