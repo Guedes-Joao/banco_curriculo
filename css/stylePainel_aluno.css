@@ -53,8 +53,7 @@ body {
   border-radius: 6px;
 }
 
-.sidebar ul li a:hover,
-.sidebar ul li a.active {
+.sidebar ul li a:hover {
   background-color: red;
 }
 
@@ -68,7 +67,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 10px 5px;
+  padding: 50px 5px;
 }
 
 .email-icon {
@@ -80,7 +79,7 @@ body {
 
 .menu-popup {
   position: absolute;
-  bottom: 52px;
+  bottom: 90px;
   left: 0;
   background-color: #ff0000;
   color: black;
@@ -105,7 +104,7 @@ body {
   margin-left: 260px;     /* compensa a largura da sidebar fixa */
   height: 100vh;          /* ocupa a viewport */
   overflow-y: auto;       /* rolagem só aqui */
-  padding: 40px;
+  padding: 100px;
   background: #f4f6f9;
   box-sizing: border-box;
 }
